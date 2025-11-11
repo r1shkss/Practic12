@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pochemu
+{
+    internal class ProgramConfig
+    {
+        public const string Version = "28.6.7";
+        public const string DeveloperName = "Your Name";
+
+        public static void PrintInfo()
+        {
+            Console.WriteLine($"Версия программы: {Version}");
+            Console.WriteLine($"Имя разработчика: {DeveloperName}");
+        }
+    }
+}
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ProgramConfig.PrintInfo();
+        }
+    }
