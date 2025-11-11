@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pochemu
+{
+    internal class Settings
+    {
+        private static readonly string configFile;
+        static Settings()
+        {
+            configFile= "C:\\configFile\\sourse\\repos\\"; 
+        }
+
+        public static void PrintConfigFile()
+        {
+            Console.WriteLine($"Путь к файлу конфигурации: {configFile}");
+        }
+    }
+}
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Settings.PrintConfigFile();
+        Console.ReadLine();
+    }
+}
