@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pochemu
+{
+    public class ObjectCounter_
+    {
+        private static int count = 0;
+
+        public ObjectCounter_()
+        {
+            count++;
+        }
+
+        public static void ShowCount()
+        {
+            Console.WriteLine($"Количество созданных объектов: {count}");
+        }
+    }
+}
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            ObjectCounter_ obj1 = new ObjectCounter_();
+            ObjectCounter_ obj2 = new ObjectCounter_();
+            ObjectCounter_ obj3 = new ObjectCounter_();
+            ObjectCounter_ obj4 = new ObjectCounter_();
+
+            ObjectCounter_.ShowCount();
+        }
+    }
