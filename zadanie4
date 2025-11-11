@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pochemu
+{
+    internal class Book
+    {
+        private readonly string isbn;
+        private string title;
+        private string author;
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string ISBN => isbn;
+
+        public Book(string isbn, string title, string author)
+        {
+            this.isbn = isbn;
+            Title = title;
+            Author = author;
+        }
+
+        public void ReadBook()
+        {
+            Console.WriteLine($"ISBN: {ISBN}");
+            Console.WriteLine($"Название: {Title}");
+            Console.WriteLine($"Автор: {Author}");
+        }
+    }
+}
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Book myBook = new Book("978-5-17-118103-1", "Война и мир", "Толстой");
+        myBook.ReadBook();
+    }
+}
